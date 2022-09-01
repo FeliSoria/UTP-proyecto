@@ -3,3 +3,7 @@ manteca
 leche
 azucar
 servilletas
+
+COCA
+PANCHOS
+MAYONESA
