@@ -1,0 +1,41 @@
+h1 {
+    background-color: black;
+    color: aquamarine; /*COMENTARIO. se puede hacer la clase en una linea*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+h2 {
+    background-color: yellow;
+    color: green;
+    text-align: center;
+
+}
+
+p {
+    color: blue;
+    font-weight: bold;
+    font-style: italic;
+}
+.important {
+    color: blue;
+    font-style: italic;
+    font-weight: bold;
+}
+ .important2 {
+        color: purple;
+        font-style: oblique;
+        font-weight: bold;  
+        vertical-align: super;
+   
+}
+
+#cajita{
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    background-color: darkgreen;
+    margin-top: 30px;
+    padding: 10px;
+    box-sizing: border-box;
+   
