@@ -1,0 +1,56 @@
+.C1 {
+    border: 10px solid #ff6550;
+    background: #33d989;
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+
+}
+
+.alternar {
+    background: lightblue;
+}
+
+.alternar.activo {
+    background: blue;
+    color: white;
+    
+}
+
+.C2 {
+    border: 10px solid #11da21;
+    background: purple;
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+
+}
+
+.alternar2 {
+    background: red;
+}
+
+.alternar2.activo2 {
+    background: orange;
+    color: white;
+}
+
+
+
+.C3 {
+    border: 10px solid #6115db;
+    background: palevioletred;
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+
+}
+
+.alternar3 {
+    background: greenyellow;
+}
+
+.alternar3.activo3 {
+    background: brown;
+    color: white;
+}
