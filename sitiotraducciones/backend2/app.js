@@ -11,6 +11,8 @@ var pool = require('./models/bd');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/admin/login');
+var adminRouter = require('./routes/admin/novedades');
+
 
 var app = express();
 
@@ -30,30 +32,48 @@ app.use(session({
   saveUninitialized: true
 }));
 
+secured = async(req, res, next) => {
+  try {
+    console.log(req.session.id_usuario);
+    if (req.session.id_usuario) {
+      next();
+    } else {
+      res.redirect('/admin/login');
+    }
+
+  } catch (error) {
+    console.log(error);
+  }
+
+}
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/admin/login', loginRouter);
+app.use('/admin/novedades', secured, adminRouter);
+
+
 
 //app.get('/', function (req, res) {
- // var conocido = Boolean(req.session.nombre);
+// var conocido = Boolean(req.session.nombre);
 //  res.render('index', {
 //    title: 'Sesiones en Express.js',
- //   conocido: conocido,
+//   conocido: conocido,
 //    nombre: req.session.nombre
- // });
+// });
 //});
 
 //app.post('/ingresar', function (req, res) {
- // if (req.body.nombre) { //captura datos de form y luego se guarda en variable de login
- //   req.session.nombre = req.body.nombre
+// if (req.body.nombre) { //captura datos de form y luego se guarda en variable de login
+//   req.session.nombre = req.body.nombre
 //  }
- // res.redirect('/');
+// res.redirect('/');
 
 //});
 
 //app.get('/salir', function (req, res) {
- // req.session.destroy();
- // res.redirect('/');
+// req.session.destroy();
+// res.redirect('/');
 //});
 
 // catch 404 and forward to error handler
